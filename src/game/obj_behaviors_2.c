@@ -281,7 +281,7 @@ static void obj_set_knockback_action(s32 attackType) {
 }
 
 static void obj_set_squished_action(void) {
-    //cur_obj_play_sound_2(SOUND_OBJ_STOMPED);
+    cur_obj_play_sound_2(SOUND_OBJ_STOMPED);
     o->oAction = OBJ_ACT_SQUISHED;
 }
 
