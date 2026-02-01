@@ -23,35 +23,35 @@ static Vtx vtx_star[] = {
 /*	Texture data of star coin.													*/
 /********************************************************************************/
 ALIGNED8 static const Texture star_coin1_txt[] = {
-#include "actors/star/star_coin1_txt.rgba16.inc.c"
+#include "actors/star/mstar1.rgba16.inc.c"
 };
 
 ALIGNED8 static const Texture star_coin2_txt[] = {
-#include "actors/star/star_coin2_txt.rgba16.inc.c"
+#include "actors/star/mstar2.rgba16.inc.c"
 };
 
 ALIGNED8 static const Texture star_coin3_txt[] = {
-#include "actors/star/star_coin3_txt.rgba16.inc.c"
+#include "actors/star/mstar3.rgba16.inc.c"
 };
 
 ALIGNED8 static const Texture star_coin4_txt[] = {
-#include "actors/star/star_coin4_txt.rgba16.inc.c"
+#include "actors/star/mstar4.rgba16.inc.c"
 };
 
 ALIGNED8 static const Texture star_coin5_txt[] = {
-#include "actors/star/star_coin5_txt.rgba16.inc.c"
+#include "actors/star/mstar5.rgba16.inc.c"
 };
 
 ALIGNED8 static const Texture star_coin6_txt[] = {
-#include "actors/star/star_coin6_txt.rgba16.inc.c"
+#include "actors/star/mstar6.rgba16.inc.c"
 };
 
 ALIGNED8 static const Texture star_coin7_txt[] = {
-#include "actors/star/star_coin7_txt.rgba16.inc.c"
+#include "actors/star/mstar7.rgba16.inc.c"
 };
 
 ALIGNED8 static const Texture star_coin8_txt[] = {
-#include "actors/star/star_coin8_txt.rgba16.inc.c"
+#include "actors/star/mstar8.rgba16.inc.c"
 };
 
 /********************************************************************************/
