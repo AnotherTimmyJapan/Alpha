@@ -4,6 +4,10 @@
 
 ****************************************************************************************************/
 
+#define LIGHT_X 0
+#define LIGHT_Y 0
+#define LIGHT_Z 127
+
 #define SCALE 0.25
 #define ShapeColor_newrabbit_base(R,G,B) { {R*SCALE ,G*SCALE ,B*SCALE ,0 ,R*SCALE ,G*SCALE ,B*SCALE ,0 },{ R, G, B, 0, R, G, B, 0, LIGHT_X, LIGHT_Y, LIGHT_Z, 0} }
 
