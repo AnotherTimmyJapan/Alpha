@@ -519,3 +519,12 @@ Hierarchy RCP_TitleMario[] = {
 	hmsEnd()
 	hmsExit()
 };
+
+//Far Mario Joke
+Hierarchy RCP_FarMario[] = {
+	hmsScale(0.25f)
+	hmsBegin()
+		hmsCall(RCP_FarMarioHierarchy)
+	hmsEnd()
+	hmsExit()
+};
