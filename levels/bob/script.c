@@ -68,6 +68,7 @@ const LevelScript level_bob_entry[] = {
     JUMP_LINK(script_func_global_1),
     JUMP_LINK(script_func_global_4),
     JUMP_LINK(script_func_global_15),
+    JUMP_LINK(script_func_global_12),
     LOAD_MODEL_FROM_GEO(MODEL_BUBBLY_TREE,      RCP_HmsMainTree),
     //LOAD_MODEL_FROM_GEO(MODEL_HANA,      RCP_HmsEnemyhana),
     LOAD_MODEL_FROM_GEO(MODEL_BOB_SEESAW_PLATFORM,  bob_geo_000458),
