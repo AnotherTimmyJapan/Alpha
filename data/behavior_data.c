@@ -2762,6 +2762,19 @@ const BehaviorScript bhvStar[] = {
     END_LOOP(),
 };
 
+const BehaviorScript bhvFlag[] = {
+    BEGIN(OBJ_LIST_LEVEL),
+    OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
+    CALL_NATIVE(bhv_init_room),
+    CALL_NATIVE(bhv_collect_flag_init),
+    SCALE(/*Unused*/ 0, /*Field*/ 150),
+    BEGIN_LOOP(),
+        CALL_NATIVE(bhv_collect_flag_loop),
+    END_LOOP(),
+};
+
+
+
 const BehaviorScript bhvTTMRollingLog[] = {
     BEGIN(OBJ_LIST_SURFACE),
     OR_INT(oFlags, OBJ_FLAG_UPDATE_GFX_POS_AND_ANGLE),
