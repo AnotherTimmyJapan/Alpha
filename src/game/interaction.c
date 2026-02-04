@@ -701,6 +701,39 @@ u32 interact_star_or_key(struct MarioState *m, UNUSED u32 interactType, struct O
     return FALSE;
 }
 
+u32 interact_flag(struct MarioState *m, UNUSED u32 interactType, struct Object *o) {
+
+    if (m->health >= 0x100) {
+        mario_stop_riding_and_holding(m);
+
+        if (!noExit) {
+            m->hurtCounter = 0;
+            m->healCounter = 0;
+        }
+
+        if (m->action & ACT_FLAG_AIR) {
+            starGrabAction = ACT_FALL_AFTER_STAR_GRAB;
+        }
+
+
+        o->oInteractStatus = INT_STATUS_INTERACTED;
+        m->interactObj = o;
+        m->usedObj = o;
+
+        starIndex = (o->oBhvParams >> 24) & 0x1F;
+        save_file_collect_star_or_key(m->numCoins, starIndex);
+
+        m->numStars =
+            save_file_get_total_star_count(gCurrSaveFileNum - 1, COURSE_MIN - 1, COURSE_MAX - 1) + 1;
+
+        play_sound(SOUND_GENERAL_CASTLE_TRAP_OPEN, m->marioObj->header.gfx.cameraToObject);
+
+        return set_mario_action(m, starGrabAction);
+    }
+
+    return FALSE;
+}
+
 u32 interact_bbh_entrance(struct MarioState *m, UNUSED u32 interactType, struct Object *o) {
     if (m->action != ACT_BBH_ENTER_SPIN && m->action != ACT_BBH_ENTER_JUMP) {
         mario_stop_riding_and_holding(m);
