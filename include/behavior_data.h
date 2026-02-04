@@ -257,5 +257,6 @@ extern const BehaviorScript bhvTTCElevator[];
 extern const BehaviorScript bhvTTC2DRotator[];
 extern const BehaviorScript bhvTTCSpinner[];
 extern const BehaviorScript bhvBubba[];
+extern const BehaviorScript bhvFlag[];
 
 #endif // BEHAVIOR_DATA_H
