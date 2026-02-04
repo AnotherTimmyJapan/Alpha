@@ -108,6 +108,7 @@ static struct InteractionHandler sInteractionHandlers[] = {
     //{ INTERACT_CAP, interact_cap },
     { INTERACT_GRABBABLE, interact_grabbable },
     { INTERACT_TEXT, interact_text },
+    { INTERACT_FLAG, interact_flag },
 };
 
 static u32 sForwardKnockbackActions[][3] = {
