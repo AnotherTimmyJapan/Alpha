@@ -1183,10 +1183,7 @@ void update_mario_button_inputs(struct MarioState *m) {
     if (m->controller->buttonDown & L_JPAD) {
         gShowDebugText = FALSE;
     }
-if (m->squishTimer == 0) {
-    if (m->controller->buttonDown & L_TRIG) {
-        spawn_object(m->marioObj, MODEL_MIPS, bhvMips);
-    }
+
     }
     if (m->action != ACT_DEBUG_FREE_MOVE && m->controller->buttonPressed & D_JPAD) {
         set_mario_action(m, ACT_DEBUG_FREE_MOVE, 0);
