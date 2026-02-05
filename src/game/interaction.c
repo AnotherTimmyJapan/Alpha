@@ -704,7 +704,9 @@ u32 interact_star_or_key(struct MarioState *m, UNUSED u32 interactType, struct O
 }
 
 u32 interact_flag(struct MarioState *m, UNUSED u32 interactType, struct Object *o) {
-u32 starIndex;
+    u32 starIndex;
+    u32 starGrabAction = ACT_STAR_DANCE_EXIT;
+    u32 noExit = (o->oInteractionSubtype & INT_SUBTYPE_NO_EXIT) != 0;
     if (m->health >= 0x100) {
         mario_stop_riding_and_holding(m);
 
