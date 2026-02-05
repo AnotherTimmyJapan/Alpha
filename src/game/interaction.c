@@ -48,6 +48,7 @@ s16 sInvulnerable;
 u32 interact_coin(struct MarioState *, u32, struct Object *);
 u32 interact_water_ring(struct MarioState *, u32, struct Object *);
 u32 interact_star_or_key(struct MarioState *, u32, struct Object *);
+u32 interact_flag(struct MarioState *, u32, struct Object *);
 u32 interact_bbh_entrance(struct MarioState *, u32, struct Object *);
 u32 interact_warp(struct MarioState *, u32, struct Object *);
 u32 interact_warp_door(struct MarioState *, u32, struct Object *);
@@ -703,7 +704,7 @@ u32 interact_star_or_key(struct MarioState *m, UNUSED u32 interactType, struct O
 }
 
 u32 interact_flag(struct MarioState *m, UNUSED u32 interactType, struct Object *o) {
-
+u32 starGrabAction = ACT_STAR_DANCE_EXIT;
     if (m->health >= 0x100) {
         mario_stop_riding_and_holding(m);
 
