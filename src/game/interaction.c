@@ -730,7 +730,7 @@ u32 starIndex;
 
         play_sound(SOUND_GENERAL_CASTLE_TRAP_OPEN, m->marioObj->header.gfx.cameraToObject);
 
-    return set_mario_action(m, starGrabAction, noExit + 2 * grandStar);
+    return set_mario_action(m, starGrabAction, noExit + 2 * 0);
     }
 
     return FALSE;
