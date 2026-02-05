@@ -708,10 +708,6 @@ u32 starIndex;
     if (m->health >= 0x100) {
         mario_stop_riding_and_holding(m);
 
-        if (!noExit) {
-            m->hurtCounter = 0;
-            m->healCounter = 0;
-        }
 
         if (m->action & ACT_FLAG_AIR) {
             starGrabAction = ACT_FALL_AFTER_STAR_GRAB;
@@ -730,7 +726,7 @@ u32 starIndex;
 
         play_sound(SOUND_GENERAL_CASTLE_TRAP_OPEN, m->marioObj->header.gfx.cameraToObject);
 
-    return set_mario_action(m, starGrabAction, noExit + 2 * 0);
+    return set_mario_action(m, starGrabAction, 0 + 2 * 0);
     }
 
     return FALSE;
