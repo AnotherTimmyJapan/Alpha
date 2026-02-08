@@ -116,6 +116,14 @@ Gfx *geo_intro_regular_backdrop(s32 state, struct GraphNode *node, UNUSED void *
     Gfx *dlIter = NULL;
     s32 i;
 
+
+gDPSetCycleType(glistp++, G_CYC_FILL);
+
+gDPSetFillColor(glistp++, (GPACK_RGBA5551(0, 0, 0, 1) << 16 | GPACK_RGBA5551(0, 0, 0, 1)));
+
+gDPFillRectangle(glistp++, 0, 0, SCREEN_WD-1, SCREEN_HT-1);
+
+
 /*    if (state == 1) { // draw
         dl = alloc_display_list(16 * sizeof(*dl));
         dlIter = dl;
