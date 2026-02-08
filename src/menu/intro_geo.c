@@ -117,24 +117,18 @@ Gfx *geo_intro_regular_backdrop(s32 state, struct GraphNode *node, UNUSED void *
     s32 i;
 
 
-gDPSetCycleType(glistp++, G_CYC_FILL);
 
-gDPSetFillColor(glistp++, (GPACK_RGBA5551(0, 0, 0, 1) << 16 | GPACK_RGBA5551(0, 0, 0, 1)));
-
-gDPFillRectangle(glistp++, 0, 0, SCREEN_WD-1, SCREEN_HT-1);
-
-
-/*    if (state == 1) { // draw
+    if (state == 1) { // draw
         dl = alloc_display_list(16 * sizeof(*dl));
         dlIter = dl;
         graphNode->node.flags = (graphNode->node.flags & 0xFF) | (LAYER_OPAQUE << 8);
         gSPDisplayList(dlIter++, &dl_proj_mtx_fullscreen);
-        gSPDisplayList(dlIter++, &title_screen_bg_dl_0A000100);
+//        gSPDisplayList(dlIter++, &title_screen_bg_dl_0A000100);
         for (i = 0; i < 12; i++) {
             gSPDisplayList(dlIter++, intro_backdrop_one_image(i));
         }
-        gSPDisplayList(dlIter++, &title_screen_bg_dl_0A000190);
+//        gSPDisplayList(dlIter++, &title_screen_bg_dl_0A000190);
         gSPEndDisplayList(dlIter);
     }
-*/    return dl;
+    return dl;
 }
