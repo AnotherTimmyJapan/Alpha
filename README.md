@@ -45,7 +45,7 @@ Yes!
 
 ## Credits
 
-#### 'Project Alpha' (Temp) Team/Contributors
+### 'Project Alpha' (Temp) Team/Contributors
 
 #### Main Programming
 - timmy6259
