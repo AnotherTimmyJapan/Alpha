@@ -1178,10 +1178,12 @@ void update_mario_button_inputs(struct MarioState *m) {
 #ifdef DEBUG
     if (m->controller->buttonDown & R_JPAD) {
         gShowDebugText = TRUE;
+         gShowProfiler = TRUE;
     }
 
     if (m->controller->buttonDown & L_JPAD) {
         gShowDebugText = FALSE;
+         gShowProfiler = FALSE;
     }
 
     if (m->action != ACT_DEBUG_FREE_MOVE && m->controller->buttonPressed & D_JPAD) {
@@ -1189,7 +1191,7 @@ void update_mario_button_inputs(struct MarioState *m) {
     }
 #endif
     if (m->controller->buttonPressed & A_BUTTON) {
-        m->input |= INPUT_A_PRESSED;
+        m->TTinput |= INPUT_A_PRESSED;
     }
 
     if (m->controller->buttonDown & A_BUTTON) {
