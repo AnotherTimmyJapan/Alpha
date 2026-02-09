@@ -20,7 +20,7 @@
 #define BORDER_HEIGHT 3
 
 // POW Build
-//#define POWBUILD
+#define POWBUILD
 
 // Debug Build
 #define DEBUG
