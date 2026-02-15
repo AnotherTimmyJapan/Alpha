@@ -23,7 +23,7 @@ const GeoLayout bob_geo_000488[] = {
                GEO_ASM(     0, geo_movtex_pause_control),
                GEO_ASM(MOVTEX_BOB_WATERFALL, geo_movtex_draw_nocolor),
                GEO_ASM(BOB_MOVTEX_WATER, geo_movtex_draw_water_regions),
-               GEO_ASM(     11, geo_envfx_main),
+               GEO_ASM(     0,  geo_envfx_main),
             GEO_CLOSE_NODE(),
          GEO_CLOSE_NODE(),
       GEO_CLOSE_NODE(),
