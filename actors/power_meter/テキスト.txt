@@ -1,0 +1,1 @@
+power_meter_left_side_full.rgba16.png
