@@ -50,7 +50,6 @@ For more questions, join our [Discord server](https://discord.gg/ynabeAS4eD).
 #### Main Programming
 - stalechilibeans
 - 1up Guy
-- elinspectorardilla
 
 #### Additional Programming
 - ummheather
@@ -102,17 +101,20 @@ For more questions, join our [Discord server](https://discord.gg/ynabeAS4eD).
 #### Miscellaneous Help
 - packrcrackr
 - Xiartic
-- WooHale54
+- Woohale54
+- RM05
 - timmy6259
 - Zucchino
 - Xerox
   
 #### Special Thanks
 - na0micakes
+- toonjoey
 - Matsilagi
 - lunr
 - CharD
 - RM05
+- icehotlemonade
 - Tony (Hard4Games)
 - aaali
 
