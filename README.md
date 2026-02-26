@@ -58,7 +58,6 @@ Yes!
 #### Main Programming
 - stalechilibeans
 - 1up Guy
-- elinspectorardilla
 
 #### Additional Programming
 - ummheather
@@ -110,17 +109,20 @@ Yes!
 #### Miscellaneous Help
 - packrcrackr
 - Xiartic
-- WooHale54
+- Woohale54
+- RM05
 - timmy6259
 - Zucchino
 - Xerox
   
 #### Special Thanks
 - na0micakes
+- toonjoey
 - Matsilagi
 - lunr
 - CharD
 - RM05
+- icehotlemonade
 - Tony (Hard4Games)
 - aaali
 
