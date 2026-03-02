@@ -13,8 +13,8 @@ Follow their [README](https://github.com/n64decomp/sm64/blob/master/README.md#in
 Clone and build:
 
 ```sh
-git clone https://github.com/96flashbacks/showfloor.git
-cd showfloor
+git clone https://github.com/AnotherTimmyJapan/Alpha.git
+cd Alpha
 make
 ```
 
