@@ -8,7 +8,6 @@ Hierarchy RCP_HmsDokan[] = {
     hmsHeader(350)
 	hmsBegin()
 		hmsGfx(RM_SURF, gfx_dokanA)
-		hmsGfx(RM_SURF, gfx_dokanB)
 	hmsEnd()
     hmsExit()
 };
