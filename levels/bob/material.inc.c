@@ -2988,7 +2988,7 @@ Gfx mat_revert_bob_Cannon_Tex_layer1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_bob_Greem_Rock_layer1[] = {
+Gfx mat_bob_Green_Rock_layer1[] = {
 	gsSPSetGeometryMode(G_FOG),
 	gsSPSetLights1(bob_lights),
 	gsDPPipeSync(),
@@ -3011,7 +3011,7 @@ Gfx mat_bob_Greem_Rock_layer1[] = {
 	gsSPEndDisplayList(),
 };
 
-Gfx mat_revert_bob_Greem_Rock_layer1[] = {
+Gfx mat_revert_bob_Green_Rock_layer1[] = {
 	gsSPClearGeometryMode(G_FOG),
 	gsDPPipeSync(),
 	gsDPSetAlphaDither(G_AD_DISABLE),
