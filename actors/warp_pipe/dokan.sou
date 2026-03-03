@@ -235,7 +235,7 @@ static Vtx vtx_dokan[] = {
 
 Gfx RCP_dokan[] = {
 
-	gsSPNumLights((&light_dokan[0].n)),
+gsSPLight((&light_dokan[0]),0),
 	gsSPLight((&light_dokan[0].l[0]),1),
 	gsSPLight((&light_dokan[0].a),2),
 
