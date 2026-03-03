@@ -3,7 +3,7 @@
 
 ## Introduction
 
-**Project Alpha (Temp)** is a recreation of hoex/fan-made alpha build version of Super Mario 64, based on [backstage by 96flashbacks](https://github.com/96flashbacks/backstage).
+**Project Alpha (Temp)** is a recreation of hoax/fan-made alpha build version of Super Mario 64, based on [backstage by 96flashbacks](https://github.com/96flashbacks/backstage).
 
 ## Installation
 
@@ -13,8 +13,8 @@ Follow their [README](https://github.com/n64decomp/sm64/blob/master/README.md#in
 Clone and build:
 
 ```sh
-git clone https://github.com/96flashbacks/showfloor.git
-cd showfloor
+git clone https://github.com/AnotherTimmyJapan/Alpha.git
+cd Alpha
 make
 ```
 
@@ -43,6 +43,10 @@ IDK.
 
 Yes!
 
+**I FORCE TO ADD THIS ASSETS AND I ORDER TO REPLACE THIS TEXTURE WITH MORE BEYTAH AGGHHGGG**
+
+Nuh.
+
 ## Credits
 
 ### 'Project Alpha (Temp)' Team/Contributors
@@ -58,7 +62,6 @@ Yes!
 #### Main Programming
 - stalechilibeans
 - 1up Guy
-- elinspectorardilla
 
 #### Additional Programming
 - ummheather
@@ -110,17 +113,20 @@ Yes!
 #### Miscellaneous Help
 - packrcrackr
 - Xiartic
-- WooHale54
+- Woohale54
+- RM05
 - timmy6259
 - Zucchino
 - Xerox
   
 #### Special Thanks
 - na0micakes
+- toonjoey
 - Matsilagi
 - lunr
 - CharD
 - RM05
+- icehotlemonade
 - Tony (Hard4Games)
 - aaali
 

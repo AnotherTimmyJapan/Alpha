@@ -16,8 +16,8 @@
 #define STACKSIZE 0x2000
 #define UNUSED_STACKSIZE 0x1400
 
-// What's the point of hav ing a border?
-#define BORDER_HEIGHT 3
+// What's the point of having a border?
+#define BORDER_HEIGHT 2
 
 // POW Build
 //#define POWBUILD
