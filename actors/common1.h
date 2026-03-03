@@ -106,13 +106,7 @@ extern Hierarchy RCP_HmsDotstar[];
 extern Hierarchy RCP_HmsMainTree[];
 
 // warp_pipe
-extern const GeoLayout warp_pipe_geo[];
-extern const Gfx warp_pipe_seg3_dl_03008E40[];
-extern const Gfx warp_pipe_seg3_dl_03008F98[];
-extern const Gfx warp_pipe_seg3_dl_03009968[];
-extern const Gfx warp_pipe_seg3_dl_03009A20[];
-extern const Gfx warp_pipe_seg3_dl_03009A50[];
-extern const Collision warp_pipe_seg3_collision_03009AC8[];
+extern Hierarchy RCP_HmsDokan[];
 
 // warp_collision
 extern const Collision door_seg3_collision_0301CE78[];

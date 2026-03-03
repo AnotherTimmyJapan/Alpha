@@ -16,8 +16,8 @@ UNUSED static const u64 binid_1 = 1;
 #include "coin/coin.sou"
 UNUSED static const u64 binid_3 = 3;
 
-#include "warp_pipe/model.inc.c"
-#include "warp_pipe/collision.inc.c"
+#include "warp_pipe/dokan.sou"
+#include "warp_pipe/dokan.flk"
 UNUSED static const u64 binid_4 = 4;
 
 #include "door/door.sou"
