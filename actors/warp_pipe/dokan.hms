@@ -4,7 +4,8 @@
 extern Gfx RCP_dokan[];
 
 Hierarchy RCP_HmsDokan[] = {
-  hmsBegin()
+	hmsBegin()
 		hmsGfx(RM_SURF, RCP_dokan)
-	hmsExit()
+		hmsEnd()
+  hmsExit()
 };
