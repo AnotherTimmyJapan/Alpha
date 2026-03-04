@@ -43,7 +43,7 @@ jobs:
         tag: "continuous"
         body: |
             This automatic pre-release is built from commit ${{github.sha}} and was triggered by @${{github.actor}}
-            [Github Actions workflow run that built this pre-release](https://github.com/${{github.repository}}/actions/runs/${{github.run_id}})
+            [GitHub Actions workflow run that built this pre-release](https://github.com/${{github.repository}}/actions/runs/${{github.run_id}})
             
             Builds from other branches are also available under this pre-release. The latest build is `${{github.event.repository.name}}-${{github.ref_name}}.bps`.
             
