@@ -6,6 +6,7 @@
 #include "dialog_ids.h"
 #include "segment_symbols.h"
 #include "level_commands.h"
+#include "config.h"
 
 #include "game/level_update.h"
 
@@ -66,7 +67,11 @@ const LevelScript level_bbh_entry[] = {
     JUMP_LINK(script_func_global_1),
     JUMP_LINK(script_func_global_10),
     JUMP_LINK(script_func_global_18),
+    #ifdef boodoor
+    LOAD_MODEL_FROM_GEO(MODEL_CASTLE_DOOR,               RCP_HmsTeresaDoor),
+    #else
     LOAD_MODEL_FROM_GEO(MODEL_CASTLE_DOOR,               RCP_HmsMainDoor),
+    #endif
     /*LOAD_MODEL_FROM_GEO(MODEL_BBH_STAIRCASE_STEP,         geo_bbh_0005B0),
     LOAD_MODEL_FROM_GEO(MODEL_BBH_TILTING_FLOOR_PLATFORM, geo_bbh_0005C8),
     LOAD_MODEL_FROM_GEO(MODEL_BBH_TUMBLING_PLATFORM,      geo_bbh_0005E0),

@@ -3,6 +3,7 @@
 
 #include "types.h"
 #include "headers.h"
+#include "config.h"
 
 // blue_fish
 extern const GeoLayout fish_shadow_geo[];
@@ -39,6 +40,9 @@ extern Hierarchy RCP_HmsMainroomDoorA[];
 extern Hierarchy RCP_HmsMainroomDoorB[];
 extern Hierarchy RCP_HmsMainroomDoorC[];
 extern Hierarchy RCP_HmsMainroomDoorD[];
+#ifdef boodoor
+extern Hierarchy RCP_HmsTeresaDoor[];
+#endif
 extern AnimePtr door_anime[];
 
 // explosion

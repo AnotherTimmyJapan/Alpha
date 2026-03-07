@@ -1,3 +1,4 @@
+#include "config.h"
 /********************************************************************************
 		RCP_FarMainDoor and RCP_NearMainDoor
 														[ Jun 1, 1996 ]
@@ -36,6 +37,15 @@ ALIGNED8 static const Texture rn_3_txt[] = {
 ALIGNED8 static const Texture rn_4_txt[] = {
 #include "actors/door/rn_4_txt.rgba16.inc.c"
 };
+#ifdef boodoor
+ALIGNED8 static const Texture teresa_door_txt[] = {
+#include "actors/door/teresa_door_txt.rgba16.inc.c"
+};
+
+ALIGNED8 static const Texture teresa_door_side_txt[] = {
+#include "actors/door/teresa_door_side_txt.rgba16.inc.c"
+};
+#endif
 
 /* ========================================================================================
 		: Vtx of NearMainDoor.
@@ -381,7 +391,139 @@ Gfx RCP_mainroom_doorD[] = {
 	gsSPDisplayList(gfx_room_no_reset),
 	gsSPEndDisplayList()
 };
+#ifdef boodoor
+/* ========================================================================================
+		: Teresa Door Near Gfx.
+===========================================================================================	*/
+Gfx RCP_NearTeresaDoor[] = {
+	gsDPPipeSync(),
+	gsDPSetCombineMode(G_CC_MODULATERGB, G_CC_MODULATERGB),
+	gsSPClearGeometryMode(G_SHADING_SMOOTH),
+	gsDPSetTile(G_IM_FMT_RGBA,G_IM_SIZ_16b, 0, 0, 7, 0,  0,0,0, 0,0,0),
 
+	gsSPTexture(0xffff,0xffff, 0, 0, G_ON),
+
+	gs_Tani_SetUpTileDescrip(G_IM_FMT_RGBA,G_IM_SIZ_16b, 32, 64,  0, 0, G_TX_WRAP|G_TX_NOMIRROR, 5, G_TX_NOLOD, G_TX_WRAP|G_TX_NOMIRROR, 6, G_TX_NOLOD),
+	gs_Tani_LoadTextureImage2(teresa_door_side_txt, G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 64, 0, 7),
+
+	gsSPLight((&light_main_door[0].l[0]),1 ),
+	gsSPLight((&light_main_door[0].a   ),2 ),
+
+	gsSPVertex(&vtx_main_doorNear[0], 16, 0), 
+	gsSP1Triangle( 0, 1, 2, 0),
+	gsSP1Triangle( 3, 4, 5, 0),
+	gsSP1Triangle( 3, 5, 6, 0),
+	gsSP1Triangle( 7, 8, 9, 0),
+	gsSP1Triangle( 7,10, 8, 0),
+	gsSP1Triangle(11,12,13, 0),
+	gsSP1Triangle(11,13,14, 0),
+	gsSP1Triangle( 0, 2,15, 0),
+
+	gs_Tani_LoadTextureImage2(teresa_door_txt, G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 64, 0, 7),
+
+	gsSPVertex(&vtx_main_doorNear[16],  8, 0), 
+	gsSP1Triangle( 0, 1, 2, 0),
+	gsSP1Triangle( 0, 2, 3, 0),
+	gsSP1Triangle( 4, 5, 6, 0),
+	gsSP1Triangle( 4, 6, 7, 0),
+
+	gsSPTexture(0xffff, 0xffff, 0, 0, G_OFF),
+
+	gsDPPipeSync(),
+	gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
+
+	gsSPLight((&light_main_door[1].l[0]),1 ),
+	gsSPLight((&light_main_door[1].a   ),2 ),
+
+	gsSPVertex(&vtx_main_doorNear[24], 14, 0), 
+	gsSP1Triangle( 0, 1, 2, 0),
+	gsSP1Triangle( 3, 4, 5, 0),
+	gsSP1Triangle( 6, 7, 8, 0),
+	gsSP1Triangle( 6, 9, 7, 0),
+	gsSP1Triangle(10,11,12, 0),
+	gsSP1Triangle( 3,13, 4, 0),
+	gsSPVertex(&vtx_main_doorNear[38], 14, 0), 
+	gsSP1Triangle( 0, 1, 2, 0),
+	gsSP1Triangle( 0, 2, 3, 0),
+	gsSP1Triangle( 4, 5, 6, 0),
+	gsSP1Triangle( 4, 6, 7, 0),
+	gsSP1Triangle( 8, 9,10, 0),
+	gsSP1Triangle(11,12,13, 0),
+	gsSPVertex(&vtx_main_doorNear[52], 15, 0), 
+	gsSP1Triangle( 0, 1, 2, 0),
+	gsSP1Triangle( 3, 4, 5, 0),
+	gsSP1Triangle( 6, 7, 8, 0),
+	gsSP1Triangle( 9,10,11, 0),
+	gsSP1Triangle(12,13,14, 0),
+	gsSPVertex(&vtx_main_doorNear[67], 16, 0), 
+	gsSP1Triangle( 0, 1, 2, 0),
+	gsSP1Triangle( 3, 4, 5, 0),
+	gsSP1Triangle( 6, 7, 8, 0),
+	gsSP1Triangle( 9,10,11, 0),
+	gsSP1Triangle( 9,12,10, 0),
+	gsSP1Triangle(13,14,15, 0),
+	gsSPVertex(&vtx_main_doorNear[83], 14, 0), 
+	gsSP1Triangle( 0, 1, 2, 0),
+	gsSP1Triangle( 3, 4, 5, 0),
+	gsSP1Triangle( 3, 5, 6, 0),
+	gsSP1Triangle( 0, 7, 1, 0),
+	gsSP1Triangle( 8, 9,10, 0),
+	gsSP1Triangle(11,12,13, 0),
+	gsSPVertex(&vtx_main_doorNear[97], 16, 0), 
+	gsSP1Triangle( 0, 1, 2, 0),
+	gsSP1Triangle( 3, 4, 5, 0),
+	gsSP1Triangle( 6, 7, 8, 0),
+	gsSP1Triangle( 3, 9, 4, 0),
+	gsSP1Triangle(10,11,12, 0),
+	gsSP1Triangle(13,14,15, 0),
+	gsSPVertex(&vtx_main_doorNear[113],  3, 0), 
+	gsSP1Triangle( 0, 1, 2, 0),
+
+	gsSPSetGeometryMode(G_SHADING_SMOOTH),
+	gsSPEndDisplayList() 
+};
+
+/* ========================================================================================
+		: Teresa Far Door Gfx.
+===========================================================================================	*/
+Gfx RCP_FarTeresaDoor[] = {
+	gsDPPipeSync(),
+	gsDPSetCombineMode(G_CC_MODULATERGB, G_CC_MODULATERGB),
+	gsSPClearGeometryMode(G_SHADING_SMOOTH),
+	gsDPSetTile(G_IM_FMT_RGBA,G_IM_SIZ_16b, 0, 0, 7, 0,  0,0,0, 0,0,0),
+
+	gsSPTexture(0xffff,0xffff, 0, 0, G_ON),
+
+		gs_Tani_SetUpTileDescrip(G_IM_FMT_RGBA,G_IM_SIZ_16b, 32, 64,  0, 0, G_TX_WRAP|G_TX_NOMIRROR, 5, G_TX_NOLOD, G_TX_WRAP|G_TX_NOMIRROR, 6, G_TX_NOLOD),
+		gs_Tani_LoadTextureImage2(teresa_door_txt, G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 64, 0, 7),
+
+		gsSPLight((&light_main_door[0].l[0]),1 ),
+		gsSPLight((&light_main_door[0].a   ),2 ),
+
+		gsSPVertex(&vtx_main_doorFar[0],  8, 0), 
+		gsSP1Triangle( 0, 1, 2, 0),
+		gsSP1Triangle( 0, 3, 1, 0),
+		gsSP1Triangle( 4, 5, 6, 0),
+		gsSP1Triangle( 4, 7, 5, 0),
+
+	gsSPTexture(0xffff, 0xffff, 0, 0, G_OFF),
+
+	gsDPPipeSync(),
+	gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
+
+	gsSPLight((&light_main_door[1].l[0]),1 ),
+	gsSPLight((&light_main_door[1].a   ),2 ),
+
+	gsSPVertex(&vtx_main_doorFar[8],  8, 0), 
+	gsSP1Triangle( 0, 1, 2, 0),
+	gsSP1Triangle( 0, 2, 3, 0),
+	gsSP1Triangle( 4, 5, 6, 0),
+	gsSP1Triangle( 4, 7, 5, 0),
+
+	gsSPSetGeometryMode(G_SHADING_SMOOTH),
+	gsSPEndDisplayList() 
+};
+#endif
 /**************************************************************************************
 
 

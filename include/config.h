@@ -22,6 +22,9 @@
 // POW Build
 //#define POWBUILD
 
+// Ghost house door
+#define boodoor
+
 // Debug Build
 #define DEBUG
 

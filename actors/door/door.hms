@@ -1,3 +1,5 @@
+#include "config.h"
+
 /********************************************************************************
 		RCP_FarMainDoor and RCP_NearMainDoor
 														[ Jun 16, 1996 ]
@@ -9,6 +11,10 @@ extern Gfx RCP_mainroom_doorA[];
 extern Gfx RCP_mainroom_doorB[];
 extern Gfx RCP_mainroom_doorC[];
 extern Gfx RCP_mainroom_doorD[];
+#ifdef boodoor
+extern Gfx RCP_NearTeresaDoor[];
+extern Gfx RCP_FarTeresaDoor[];
+#endif
 
 /* ====================================================================================	
 		: RCP_HmsMainDoor
@@ -178,3 +184,33 @@ Hierarchy RCP_HmsMainroomDoorD[] = {
  hmsEnd()
  hmsExit()
 };
+#ifdef boodoor
+/* ====================================================================================	
+		: RCP_HmsTeresaDoor
+======================================================================================= */
+Hierarchy RCP_HmsTeresaDoor[] = {
+ hmsTrans(78,0,0)
+ hmsBegin()
+ hmsScale(0.25f)
+    hmsBegin()
+      hmsJoint(RM_SURF,NULL,-300,0,0)  /* chn19(3) */
+      hmsBegin()
+			hmsBegin()
+				hmsLOD(-2048,2000)
+				hmsBegin()
+					hmsJoint(RM_SURF, RCP_NearTeresaDoor, 0,0,0)
+				hmsEnd()
+				hmsLOD(2000,32767)
+				hmsBegin()
+					hmsJoint(RM_SURF, RCP_FarTeresaDoor, 0,0,0)
+				hmsEnd()
+			hmsEnd()
+            hmsJoint(RM_SURF,NULL,0,0,0)	  	/* sphere2(1) */
+            hmsJoint(RM_SURF,NULL,0,0,0)  		/* sphere1(0) */
+         hmsEnd()
+      hmsEnd()
+   hmsEnd()
+ hmsEnd()
+ hmsExit()
+};
+#endif
