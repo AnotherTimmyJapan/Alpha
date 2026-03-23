@@ -35,6 +35,7 @@ extern const Gfx dirt_seg3_dl_0302C458[];
 
 // door
 extern Hierarchy RCP_HmsMainDoor[];
+extern Hierarchy RCP_HmsNewMainDoor[];
 extern Hierarchy RCP_HmsMainroomDoorA[];
 extern Hierarchy RCP_HmsMainroomDoorB[];
 extern Hierarchy RCP_HmsMainroomDoorC[];
