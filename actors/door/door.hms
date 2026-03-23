@@ -9,6 +9,7 @@ extern Gfx RCP_mainroom_doorA[];
 extern Gfx RCP_mainroom_doorB[];
 extern Gfx RCP_mainroom_doorC[];
 extern Gfx RCP_mainroom_doorD[];
+extern Gfx RCP_NewNearMainDoor[];
 
 /* ====================================================================================	
 		: RCP_HmsMainDoor
@@ -38,6 +39,37 @@ Hierarchy RCP_HmsMainDoor[] = {
  hmsEnd()
  hmsExit()
 };
+
+
+/* ====================================================================================	
+		: RCP_HmsNewMainDoor
+======================================================================================= */
+Hierarchy RCP_HmsNewMainDoor[] = {
+ hmsTrans(78,0,0)
+ hmsBegin()
+ hmsScale(0.25f)
+    hmsBegin()
+      hmsJoint(RM_SURF,NULL,-300,0,0)  /* chn19(3) */
+      hmsBegin()
+			hmsBegin()
+				hmsLOD(-2048,2000)
+				hmsBegin()
+					hmsJoint(RM_SURF, RCP_NewNearMainDoor, 0,0,0)
+				hmsEnd()
+				hmsLOD(2000,32767)
+				hmsBegin()
+					hmsJoint(RM_SURF, RCP_FarMainDoor, 0,0,0)
+				hmsEnd()
+			hmsEnd()
+            hmsJoint(RM_SURF,NULL,0,0,0)	  	/* sphere2(1) */
+            hmsJoint(RM_SURF,NULL,0,0,0)  		/* sphere1(0) */
+         hmsEnd()
+      hmsEnd()
+   hmsEnd()
+ hmsEnd()
+ hmsExit()
+};
+
 
 /* ====================================================================================	
 		: RCP_HmsMainroomDoorA
