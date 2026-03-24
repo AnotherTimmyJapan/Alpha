@@ -409,6 +409,48 @@ Gfx RCP_FarMainDoor[] = {
 };
 
 /* ========================================================================================
+		: NewFarMainDoor Gfx.
+===========================================================================================	*/
+Gfx RCP_NewFarMainDoor[] = {
+	gsDPPipeSync(),
+	gsDPSetCombineMode(G_CC_MODULATERGB, G_CC_MODULATERGB),
+	gsSPClearGeometryMode(G_SHADING_SMOOTH),
+	gsDPSetTile(G_IM_FMT_RGBA,G_IM_SIZ_16b, 0, 0, 7, 0,  0,0,0, 0,0,0),
+
+	gsSPTexture(0xffff,0xffff, 0, 0, G_ON),
+
+		gs_Tani_SetUpTileDescrip(G_IM_FMT_RGBA,G_IM_SIZ_16b, 32, 64,  0, 0, G_TX_WRAP|G_TX_NOMIRROR, 5, G_TX_NOLOD, G_TX_WRAP|G_TX_NOMIRROR, 6, G_TX_NOLOD),
+		gs_Tani_LoadTextureImage2(new_door_txt, G_IM_FMT_RGBA, G_IM_SIZ_16b, 32, 64, 0, 7),
+
+		gsSPLight((&light_main_door[0].l[0]),1 ),
+		gsSPLight((&light_main_door[0].a   ),2 ),
+
+		gsSPVertex(&vtx_main_doorFar[0],  8, 0), 
+		gsSP1Triangle( 0, 1, 2, 0),
+		gsSP1Triangle( 0, 3, 1, 0),
+		gsSP1Triangle( 4, 5, 6, 0),
+		gsSP1Triangle( 4, 7, 5, 0),
+
+	gsSPTexture(0xffff, 0xffff, 0, 0, G_OFF),
+
+	gsDPPipeSync(),
+	gsDPSetCombineMode(G_CC_SHADE, G_CC_SHADE),
+
+	gsSPLight((&light_main_door[1].l[0]),1 ),
+	gsSPLight((&light_main_door[1].a   ),2 ),
+
+	gsSPVertex(&vtx_main_doorFar[8],  8, 0), 
+	gsSP1Triangle( 0, 1, 2, 0),
+	gsSP1Triangle( 0, 2, 3, 0),
+	gsSP1Triangle( 4, 5, 6, 0),
+	gsSP1Triangle( 4, 7, 5, 0),
+
+	gsSPSetGeometryMode(G_SHADING_SMOOTH),
+	gsSPEndDisplayList() 
+};
+
+
+/* ========================================================================================
 		: Room numver Vtx and Gfx.
 ===========================================================================================	*/
 static Vtx vtx_room_no_0[] = {

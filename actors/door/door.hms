@@ -10,6 +10,7 @@ extern Gfx RCP_mainroom_doorB[];
 extern Gfx RCP_mainroom_doorC[];
 extern Gfx RCP_mainroom_doorD[];
 extern Gfx RCP_NewNearMainDoor[];
+extern Gfx RCP_NewFarMainDoor[];
 
 /* ====================================================================================	
 		: RCP_HmsMainDoor
@@ -58,7 +59,7 @@ Hierarchy RCP_HmsNewMainDoor[] = {
 				hmsEnd()
 				hmsLOD(2000,32767)
 				hmsBegin()
-					hmsJoint(RM_SURF, RCP_FarMainDoor, 0,0,0)
+					hmsJoint(RM_SURF, RCP_NewFarMainDoor, 0,0,0)
 				hmsEnd()
 			hmsEnd()
             hmsJoint(RM_SURF,NULL,0,0,0)	  	/* sphere2(1) */
