@@ -10,6 +10,7 @@ extern const GeoLayout RCP_Stage1Scene1[];
 // leveldata
 extern const Gfx gfx_castle[];
 extern const Collision castle_info[];
+//extern struct AreaMapData areaMap_01_01;
 //extern static Movtex castle_movtex_water_data[];
 extern const struct MovtexQuadCollection castle_movtex_water[];
 
