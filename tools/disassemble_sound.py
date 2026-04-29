@@ -564,6 +564,16 @@ class NoIndentEncoder(json.JSONEncoder):
         return re.sub(r"\"@@[0-9a-f]*?@@\"", repl, result)
 
 
+def inst_ifdef_json(bank_index, inst_index):
+    if bank_index == 7 and inst_index >= 13:
+        return NoIndent(["VERSION_US", "VERSION_EU"])
+    if bank_index == 8 and inst_index >= 16:
+        return NoIndent(["VERSION_US", "VERSION_EU"])
+    if bank_index == 10 and inst_index >= 14:
+        return NoIndent(["VERSION_US", "VERSION_EU"])
+    return None
+
+
 def main():
     args = []
     need_help = False
@@ -748,6 +758,7 @@ def main():
             for inst_index, inst in enumerate(bank.all_insts):
                 if isinstance(inst, Inst):
                     inst_json = {
+                        "ifdef": inst_ifdef_json(bank_index, inst_index),
                         "release_rate": inst.release_rate,
                         "normal_range_lo": inst.normal_range_lo,
                         "normal_range_hi": inst.normal_range_hi,
