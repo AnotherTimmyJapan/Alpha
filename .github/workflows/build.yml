@@ -27,7 +27,7 @@ jobs:
           ${{ runner.os }}-tools-
 
     - name: Retrieve required files
-      run: curl -L "https://drive.google.com/uc?export=download&id=1q4wA2GaeALgVH4e-lgyos0MA6nWNRWRk" > baserom.jp.z64
+      run: curl -L "https://drive.google.com/uc?export=download&id=1mjwPwFgGhM-pSNwWu0lMbwG-e1doYrPx" > baserom.jp.z64
 
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag sm64

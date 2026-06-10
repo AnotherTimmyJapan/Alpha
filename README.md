@@ -49,6 +49,7 @@ Nuh.
 
 ## Credits
 
+<<<<<<< HEAD
 ### 'Project Alpha (Temp)' Team/Contributors
 
 #### Main Programming
@@ -59,11 +60,14 @@ Nuh.
 
 ### Original '96flashbacks' Team
 
+=======
+>>>>>>> upstream/main
 #### Main Programming
 - stalechilibeans
 - 1up Guy
 
 #### Additional Programming
+<<<<<<< HEAD
 - ummheather
 - iProgramInCpp
 
@@ -89,12 +93,22 @@ Nuh.
 ### Original '96flashbacks' Server Contributors
 
 #### Additional Programming
+=======
+>>>>>>> upstream/main
 - Phil564
 - klorfmorf/Fluvian
 - diesel64
 - penguinlambz
+- ummheather
+- iProgramInCpp
+- crackaddictkonata
 
 #### Assets
+- Scraps
+- ummheather
+- 1up Guy
+- stalechilibeans
+- `K-Dubs΄
 - toonjoey
 - Lurondor
 - icehotlemonade
@@ -109,6 +123,20 @@ Nuh.
 - RetroDev
 - emlimate
 - XKoop7321
+- `K-Dubs΄
+- 1up Guy
+- stalechilibeans
+- ummheather
+
+#### Research & Playtesting
+- Scraps
+- Sleekflash16
+- toonjoey
+- Xiartic
+- Lurondor
+- Zucchino
+- duskewl/jadu
+- `K-Dubs΄
 
 #### Miscellaneous Help
 - packrcrackr
@@ -130,7 +158,7 @@ Nuh.
 - Tony (Hard4Games)
 - aaali
 
-### Original 'The Preservation Project' Team
+## Original 'The Preservation Project' Credits
 
 #### Programming
 - klorfmorf/Fluvian
@@ -148,7 +176,7 @@ Nuh.
 - Xiartic
 - lunr
   
-#### Original 'The Preservation Project' Contributors
+#### Original 'The Preservation Project' GitHub Contributors
 - 1up Guy
 - Guestpiki
 - iProgramInCpp

@@ -40,7 +40,7 @@ ALIGNED8 static const u8 wf_seg7_texture_07004000[] = {
 
 // 0x07004800 - 0x07005800
 ALIGNED8 static const u8 wf_seg7_texture_07004800[] = {
-#include "levels/wf/8.rgba16.inc.c"
+#include "levels/wf/8.ia16.inc.c"
 };
 
 // 0x07005800 - 0x07006000
